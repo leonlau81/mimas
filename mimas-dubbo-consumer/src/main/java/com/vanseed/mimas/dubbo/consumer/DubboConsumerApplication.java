@@ -8,9 +8,9 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 @ComponentScan(basePackages = {"com.vanseed.mimas"})  
-public class WebApplication {
+public class DubboConsumerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebApplication.class, args);
+		SpringApplication.run(DubboConsumerApplication.class, args);
 	}
 }
