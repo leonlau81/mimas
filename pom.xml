@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.vanseed.mimas</groupId>
+	<artifactId>mimas</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>mimas : parent</name>
+	<description>Vanseed Mimas Parent Project</description>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.10.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<!-- 主要依赖库的版本定义 -->
+		<spring.version>4.3.14.RELEASE</spring.version>
+		<mysql.version>5.1.46</mysql.version>
+		<druid.version>1.1.9</druid.version>
+		<guava.version>24.0-jre</guava.version>
+		<jackson.version>2.9.4</jackson.version>
+		
+		<spring-boot-starter-dubbo.version>1.0.7</spring-boot-starter-dubbo.version>
+		
+		
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	
+	<!-- 预定义依赖项的version,scope与exclusions,子项目中只需定义groupId 与  artifactId 即可 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>		
+		</dependencies>
+	</dependencyManagement>
+	
+	<!-- 定义依赖,子项目默认继承 -->
+	<dependencies>
+				
+	</dependencies>
+	
+	<!-- 子项目 -->
+	<modules>
+		<module>mimas-common</module>
+		<module>mimas-domain</module>
+		<module>mimas-service</module>	
+		<module>mimas-dubbo-service</module>	
+		<module>mimas-dubbo-provider</module>	
+		<module>mimas-dubbo-consumer</module>				
+		<module>mimas-eureka-server</module>	
+		<module>mimas-eureka-client</module>	
+		<module>mimas-eureka-consumer</module>
+		<module>mimas-eureka-config</module>
+		<module>mimas-zuul</module>	
+		<module>mimas-mq</module>
+		<module>mimas-rpc</module>
+		<module>mimas-elastic-job</module>		
+		<module>mimas-web</module>	
+	</modules>
+	
+	<repositories>
+	    <repository>
+			<id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+	    </repository>
+	</repositories>
+
+</project>

@@ -1,0 +1,35 @@
+syntax = "proto3";
+package userService;
+option java_package = "com.vanseed.mimas.rpc.grpc.user";
+option java_outer_classname = "UserProto";
+
+//用户查询请求
+message FindUserRequest {
+  //请求id
+  string requestId = 1;
+  //用户名
+  string userName = 2;
+  //用户ID
+  string userId = 3;
+}
+
+//用户查询响应
+message UserInfoResponse {
+  //请求流水
+  string requestId = 1;
+  //返回码，1:成功; -1:失败
+  int32 rc = 2;
+  //用户id
+  int32 userId = 3;
+  //用户手机
+  string userMobile = 4;
+}
+
+/**
+ * 用户查询服务
+ */
+service FindUserService {
+
+  //用户查询方法
+  rpc find(FindUserRequest) returns (UserInfoResponse);
+}
