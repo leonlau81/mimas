@@ -56,6 +56,8 @@
 	<modules>
 		<module>mimas-common</module>
 		<module>mimas-domain</module>
+		<module>mimas-domain-user</module>
+		<module>mimas-domain-acct</module>
 		<module>mimas-service</module>	
 		<module>mimas-dubbo-service</module>	
 		<module>mimas-dubbo-provider</module>	
@@ -66,7 +68,7 @@
 		<module>mimas-eureka-config</module>
 		<module>mimas-zuul</module>	
 		<module>mimas-mq</module>
-		<module>mimas-rpc</module>
+		<!-- <module>mimas-rpc</module> -->
 		<module>mimas-elastic-job</module>		
 		<module>mimas-web</module>	
 	</modules>

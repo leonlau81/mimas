@@ -5,7 +5,6 @@ package com.vanseed.mimas.service.user;
 
 import java.util.List;
 
-import com.vanseed.mimas.domain.model.sample.Sample;
 import com.vanseed.mimas.domain.model.user.UserInfo;
 
 

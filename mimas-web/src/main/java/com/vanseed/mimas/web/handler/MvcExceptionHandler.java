@@ -2,13 +2,12 @@ package com.vanseed.mimas.web.handler;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.web.bind.annotation.ControllerAdvice;
+import com.vanseed.mimas.common.support.mvc.Response;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.vanseed.mimas.common.exception.ServiceException;
-import com.vanseed.mimas.common.mvc.support.CombResponse;
-import com.vanseed.mimas.common.mvc.support.CombResponseUtils;
+import com.vanseed.mimas.common.support.mvc.ResponseUtils;
 
 //@ControllerAdvice
 public class MvcExceptionHandler {
@@ -18,7 +17,7 @@ public class MvcExceptionHandler {
     @ExceptionHandler(value = ServiceException.class)
     public ModelAndView serviceExceptionHandler(HttpServletRequest req, ServiceException se) throws Exception {
         ModelAndView mav = new ModelAndView();
-        CombResponse response = CombResponseUtils.getErrorRespose(se);
+        Response response = ResponseUtils.getErrorRespose(se);
         mav.addObject("response", response);
         mav.addObject("exception", se);
         mav.addObject("url", req.getRequestURL());

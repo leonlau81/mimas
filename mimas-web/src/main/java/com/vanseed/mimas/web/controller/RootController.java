@@ -4,34 +4,18 @@
  */
 package com.vanseed.mimas.web.controller;
 
-import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.HashMap;
 import java.util.Map;
 
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.vanseed.mimas.common.exception.ServiceException;
-import com.vanseed.mimas.common.mvc.support.CombResponse;
-import com.vanseed.mimas.common.mvc.support.CombResponseUtils;
 
 /**
  * @author leon

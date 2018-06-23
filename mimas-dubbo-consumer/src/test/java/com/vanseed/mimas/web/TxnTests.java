@@ -12,9 +12,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.vanseed.mimas.domain.model.sample.Sample;
-import com.vanseed.mimas.domain.mybatis.mapper.SampleMapper;
-import com.vanseed.mimas.domain.repository.sample.SampleRepository;
+import com.vanseed.mimas.domain.mybatis.user.SampleMapper;
 import com.vanseed.mimas.service.sample.ISampleService;
 
 @RunWith(SpringRunner.class)

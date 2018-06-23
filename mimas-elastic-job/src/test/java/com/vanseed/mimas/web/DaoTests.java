@@ -1,8 +1,5 @@
 package com.vanseed.mimas.web;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,10 +12,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
-import com.vanseed.mimas.domain.helper.PageInfo;
-import com.vanseed.mimas.domain.model.sample.Sample;
-import com.vanseed.mimas.domain.mybatis.mapper.SampleMapper;
-import com.vanseed.mimas.domain.repository.sample.SampleRepository;
+import com.vanseed.mimas.common.page.PageInfo;
+import com.vanseed.mimas.domain.model.user.Sample;
+import com.vanseed.mimas.domain.mybatis.user.SampleMapper;
+import com.vanseed.mimas.domain.repository.user.SampleRepository;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

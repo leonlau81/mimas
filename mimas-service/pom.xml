@@ -31,8 +31,8 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<dependency>	
+
+		<dependency>
 			<groupId>com.vanseed.mimas</groupId>
 			<artifactId>mimas-common</artifactId>
 			<version>1.0.0-SNAPSHOT</version>

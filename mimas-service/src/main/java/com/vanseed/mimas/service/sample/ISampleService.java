@@ -5,9 +5,8 @@ package com.vanseed.mimas.service.sample;
 
 import java.math.BigDecimal;
 import java.util.List;
-import java.util.Map;
 
-import com.vanseed.mimas.domain.model.sample.Sample;
+import com.vanseed.mimas.domain.model.user.Sample;
 
 
 /**

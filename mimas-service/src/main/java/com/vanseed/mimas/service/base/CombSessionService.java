@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import com.vanseed.mimas.common.exception.ServiceException;
-import com.vanseed.mimas.common.servlet.support.MobileSession;
+import com.vanseed.mimas.common.support.servlet.MobileSession;
 import com.vanseed.mimas.common.utils.JacksonJsonUtil;
 
 

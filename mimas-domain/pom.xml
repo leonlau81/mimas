@@ -17,7 +17,11 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>		
+		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jta-atomikos</artifactId>
+        </dependency>
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
@@ -33,11 +37,7 @@
             <artifactId>druid</artifactId>
             <version>1.1.9</version>          
         </dependency>
-        <dependency>	<!-- mybatis翻页插件 -->
-			<groupId>com.github.pagehelper</groupId>
-			<artifactId>pagehelper</artifactId>
-			<version>4.2.1</version>
-		</dependency>
+
 		
 		<dependency>	
 			<groupId>com.vanseed.mimas</groupId>
@@ -47,6 +47,15 @@
 	</dependencies>
 
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/java</directory>
+				<includes>
+					<include>**/*.xml</include>
+				</includes>
+			</resource>
+		</resources>
+
 		<plugins>
 			<!-- compile plugin -->
 			<plugin>

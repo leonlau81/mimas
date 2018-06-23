@@ -13,7 +13,8 @@ import org.springframework.util.StringUtils;
  *
  */
 public class ExceptionUtils {
-	public static String getFormatExceptionMessage(Exception e) {
+
+    public static String getFormatExceptionMessage(Exception e) {
 		List<String> exceptionStack = new ArrayList<String>();
 		exceptionStack.add(e.getClass().getName());
 		for (StackTraceElement ste : e.getStackTrace()) {
@@ -23,4 +24,20 @@ public class ExceptionUtils {
 		}
 		return StringUtils.collectionToDelimitedString(exceptionStack, "");
 	}
+
+    /**
+     * 根据异常信息代码和异常信息参数初始化多条业务异常
+     * @param ex
+     */
+    public static RuntimeException unchecked(Throwable ex)
+    {
+        if (ex instanceof RuntimeException)
+        {
+            return (RuntimeException) ex;
+        }
+        else
+        {
+            return new RuntimeException(ex);
+        }
+    }
 }

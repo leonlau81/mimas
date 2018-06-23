@@ -4,30 +4,12 @@
  */
 package com.vanseed.mimas.dubbo.consumer.controller;
 
-import java.awt.image.BufferedImage;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.Map;
-
-import javax.imageio.ImageIO;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
-import com.vanseed.mimas.common.exception.ServiceException;
-import com.vanseed.mimas.common.mvc.support.CombResponse;
-import com.vanseed.mimas.common.mvc.support.CombResponseUtils;
 
 /**
  * @author leon
@@ -52,7 +34,7 @@ public class RootController extends BaseController {
 //	 * 登录
 //	 */
 //	@RequestMapping(value = "/login")
-//	public @ResponseBody CombResponse login(
+//	public @ResponseBody Response login(
 //			@RequestBody Map<String, Object> paraMap,
 //			HttpServletRequest request, HttpServletResponse response,
 //			Model model){
@@ -76,10 +58,10 @@ public class RootController extends BaseController {
 //			
 //			rtnMap.put("forwardUrl", "/admin/index.do");
 //		}catch(ServiceException se){
-//			return CombResponseUtils.getErrorWokeRespose(se);
+//			return ResponseUtils.getErrorWokeRespose(se);
 //		}
 //		
-//		return CombResponseUtils.getSuccessWokeRespose(rtnMap);
+//		return ResponseUtils.getSuccessWokeRespose(rtnMap);
 //	}
 //	
 //	/**

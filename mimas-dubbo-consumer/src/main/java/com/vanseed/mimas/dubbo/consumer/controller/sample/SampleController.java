@@ -12,20 +12,17 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.vanseed.mimas.common.support.mvc.Response;
+import com.vanseed.mimas.common.support.mvc.ResponseUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.request.ServletWebRequest;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import com.vanseed.mimas.common.mvc.support.CombResponse;
-import com.vanseed.mimas.common.mvc.support.CombResponseUtils;
 import com.vanseed.mimas.common.utils.ParamUtils;
-import com.vanseed.mimas.domain.model.sample.Sample;
+import com.vanseed.mimas.domain.model.user.Sample;
 import com.vanseed.mimas.dubbo.consumer.controller.BaseController;
 import com.vanseed.mimas.service.sample.ISampleService;
 
@@ -60,13 +57,13 @@ public class SampleController extends BaseController {
 	 */
 	@RequestMapping(value = "list")
 	@ResponseBody
-	public CombResponse sampleList(
+	public Response sampleList(
 			@RequestBody(required=false) Map<String, Object> requestMap,
 			HttpServletRequest request, HttpServletResponse response) {
 		
 		List<Sample> list = sampleService.findAll();
 		
-		return CombResponseUtils.getSuccessRespose(list);
+		return ResponseUtils.getSuccessRespose(list);
 	}
 	
 	/**
@@ -74,13 +71,13 @@ public class SampleController extends BaseController {
 	 */
 	@RequestMapping(value = "info/{sampleId}")
 	@ResponseBody
-	public CombResponse sampleInfo(
+	public Response sampleInfo(
 			@PathVariable Long sampleId, 
 			HttpServletRequest request, HttpServletResponse response) {
 		
 		Sample sample = sampleService.findSampleById(sampleId);
 		
-		return CombResponseUtils.getSuccessRespose(sample);
+		return ResponseUtils.getSuccessRespose(sample);
 	}
 	
 	/**
@@ -88,7 +85,7 @@ public class SampleController extends BaseController {
 	 */
 	@RequestMapping(value = "modifyAmount")
 	@ResponseBody
-	public CombResponse modifyAmount(
+	public Response modifyAmount(
 			@RequestBody(required=true) Map<String, Object> requestMap,
 			HttpServletRequest request, HttpServletResponse response) {
 		
@@ -98,7 +95,7 @@ public class SampleController extends BaseController {
 		//Sample sample = sampleService.findSampleById(sampleId);
 		Sample sample = sampleService.modifyAmount(sampleId, amount);
 		
-		return CombResponseUtils.getSuccessRespose(sample);
+		return ResponseUtils.getSuccessRespose(sample);
 	}
 	
 		
