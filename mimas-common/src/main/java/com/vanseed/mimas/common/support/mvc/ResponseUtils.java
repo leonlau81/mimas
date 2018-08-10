@@ -3,7 +3,9 @@
  */
 package com.vanseed.mimas.common.support.mvc;
 
+import java.util.HashMap;
 import java.util.Locale;
+import java.util.Map;
 
 import org.springframework.util.StringUtils;
 
@@ -78,7 +80,7 @@ public class ResponseUtils {
 		}
 	}
 	
-	public static Response getSuccessRespose(Object obj) {
+	public static Response getSuccessRespose(Map<String, Object> obj) {
 		String memo = "";
 		try{
 			memo = MessageSourceUtils.getMessage(DEFAULT_SUCCESS_MSG_CODE, LocaleUtil.toLocale(ThreadLocalUtils.getLanguage()));			
@@ -89,4 +91,18 @@ public class ResponseUtils {
 		response.setMemo(memo);
 		return response;
 	}
+
+    public static Response getSuccessRespose(String key, Object obj) {
+        String memo = "";
+        try{
+            memo = MessageSourceUtils.getMessage(DEFAULT_SUCCESS_MSG_CODE, LocaleUtil.toLocale(ThreadLocalUtils.getLanguage()));
+        }catch(Exception e){
+            memo = DEFAULT_SUCCESS_MSG_CODE;
+        }
+        Map<String, Object> rtnMap = new HashMap<String, Object>();
+        rtnMap.put(key, obj);
+        Response response = Response.newSuccess(rtnMap);
+        response.setMemo(memo);
+        return response;
+    }
 }

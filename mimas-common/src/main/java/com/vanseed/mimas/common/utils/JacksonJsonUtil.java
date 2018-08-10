@@ -61,7 +61,7 @@ public class JacksonJsonUtil
 		try
 		{		
 			ObjectMapper mapper = new ObjectMapper();
-			//rtnMap = user.readValue(strJson, Map.class);
+			//rtnMap = acct.readValue(strJson, Map.class);
 			//读代码的同学看一下java泛型的擦除机制-leon
 			rtnMap = mapper.readValue(strJson, new TypeReference<Map<String, String>>(){});
 		}
@@ -109,7 +109,7 @@ public class JacksonJsonUtil
 		try
 		{		
 			ObjectMapper mapper = new ObjectMapper();
-			//rtnMap = user.readValue(strJson, Map.class);
+			//rtnMap = acct.readValue(strJson, Map.class);
 			//读代码的同学看一下java泛型的擦除机制-leon
 			rtnArray = mapper.readValue(strJson, new TypeReference<String[]>(){});
 		}
@@ -151,7 +151,7 @@ public class JacksonJsonUtil
 		try
 		{		
 			ObjectMapper mapper = new ObjectMapper();
-			//rtnMap = user.readValue(strJson,  Map.class);
+			//rtnMap = acct.readValue(strJson,  Map.class);
 			rtnMap = mapper.readValue(strJson, new TypeReference<Map<String, Object>>(){});
 		}
 		catch(Exception e)

@@ -27,8 +27,7 @@ import java.util.Map;
 @Configuration
 @EnableJpaRepositories(
         entityManagerFactoryRef="userEntityManagerFactory",
-        //transactionManagerRef="userTransactionManager",
-        transactionManagerRef="jtaTransactionManager",
+        transactionManagerRef="userTransactionManager",
         basePackages= { "com.vanseed.mimas.domain.repository.user" }) //设置Repository所在位置
 public class UserJPAConfig {
 
@@ -60,11 +59,11 @@ public class UserJPAConfig {
         return jpaProperties.getHibernateProperties(dataSource);
     }
 
-//    @Primary
-//    @Bean(name = "userTransactionManager")
-//    @Qualifier("userTxn")
-//    public PlatformTransactionManager userTransactionManager(EntityManagerFactoryBuilder builder) {
-//        return new JpaTransactionManager(userEntityManagerFactory(builder).getObject());
-//    }
+    @Primary
+    @Bean(name = "userTransactionManager")
+    @Qualifier("userTxn")
+    public PlatformTransactionManager userTransactionManager(EntityManagerFactoryBuilder builder) {
+        return new JpaTransactionManager(userEntityManagerFactory(builder).getObject());
+    }
 
 }

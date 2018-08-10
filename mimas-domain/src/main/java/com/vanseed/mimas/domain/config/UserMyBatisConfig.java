@@ -19,7 +19,7 @@ import org.springframework.core.io.support.ResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = {"com.vanseed.mimas.domain.mybatis.user"}, sqlSessionTemplateRef = "userSqlSessionTemplate")
+@MapperScan(basePackages = {"com.vanseed.mimas.domain.mybatis.acct"}, sqlSessionTemplateRef = "userSqlSessionTemplate")
 public class UserMyBatisConfig {
 
 	@Autowired
@@ -41,7 +41,7 @@ public class UserMyBatisConfig {
 		//添加XML目录
 		ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
 		try {
-			bean.setMapperLocations(resolver.getResources("classpath:com/vanseed/mimas/domain/mybatis/user/*.xml"));
+			bean.setMapperLocations(resolver.getResources("classpath:com/vanseed/mimas/domain/mybatis/acct/*.xml"));
 			return bean.getObject();
 		} catch (Exception e) {
 			e.printStackTrace();

@@ -20,14 +20,14 @@ import com.vanseed.mimas.common.exception.ServiceException;
 import com.vanseed.mimas.domain.model.user.Sample;
 import com.vanseed.mimas.domain.mybatis.user.SampleMapper;
 import com.vanseed.mimas.domain.repository.user.SampleRepository;
-import com.vanseed.mimas.service.base.CombBaseService;
+import com.vanseed.mimas.service.base.BaseService;
 
 /**
  * @author leon
  *
  */
 @Component("sampleService")
-public class SampleService extends CombBaseService implements ISampleService {
+public class SampleService extends BaseService implements ISampleService {
 	
 	private final Logger logger = LoggerFactory.getLogger(getClass());  
 		

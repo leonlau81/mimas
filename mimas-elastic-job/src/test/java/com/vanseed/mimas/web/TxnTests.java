@@ -40,7 +40,7 @@ public class TxnTests {
 	public void test() throws Exception {
 		
 			sampleService.testTxn();
-			//AdminUser user = adminUserMapper.findByName("aaa");
+			//AdminUser acct = adminUserMapper.findByName("aaa");
 			//AdminUser userA = adminUserMapper.findByName("BBB");
 
 		

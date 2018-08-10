@@ -51,7 +51,7 @@ public class UserJPAConfig {
         return builder
                 .dataSource(userDataSource)
                 .properties(getVendorProperties(userDataSource))
-                .packages("com.vanseed.mimas.domain.model.user") //设置实体类所在位置
+                .packages("com.vanseed.mimas.domain.model.acct") //设置实体类所在位置
                 .persistenceUnit("primaryPersistenceUnit")
                 .build();
     }

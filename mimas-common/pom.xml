@@ -39,6 +39,16 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 		
 		<dependency>
     		<groupId>com.fasterxml.jackson.core</groupId>
@@ -60,6 +70,12 @@
 			<artifactId>pagehelper</artifactId>
 			<version>4.2.1</version>
 		</dependency>
+        <dependency>    <!-- servlet -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
 
         <dependency>
             <groupId>commons-codec</groupId>

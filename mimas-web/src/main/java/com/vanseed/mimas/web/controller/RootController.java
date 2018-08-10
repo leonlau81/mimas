@@ -34,7 +34,7 @@ public class RootController extends BaseController {
 	public String loginPage(
 			HttpServletRequest request, HttpServletResponse response,
 			Model model){
-		model.addAttribute("host", "comb user");
+		model.addAttribute("host", "comb acct");
 		return "login";
 	}
 	

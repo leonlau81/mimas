@@ -58,12 +58,15 @@
 		<module>mimas-domain</module>
 		<module>mimas-domain-user</module>
 		<module>mimas-domain-acct</module>
-		<module>mimas-service</module>	
+		<module>mimas-service</module>
+		<module>mimas-service-user</module>	
+		<module>mimas-service-acct</module>	
 		<module>mimas-dubbo-service</module>	
 		<module>mimas-dubbo-provider</module>	
 		<module>mimas-dubbo-consumer</module>				
-		<module>mimas-eureka-server</module>	
-		<module>mimas-eureka-client</module>	
+		<module>mimas-cloud-eureka</module>	
+		<module>mimas-cloud-api-user</module>
+		<module>mimas-cloud-api-acct</module>		
 		<module>mimas-eureka-consumer</module>
 		<module>mimas-eureka-config</module>
 		<module>mimas-zuul</module>	

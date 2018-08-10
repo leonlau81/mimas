@@ -11,10 +11,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vanseed.mimas.domain.model.user.UserInfo;
-import com.vanseed.mimas.service.user.IUserInfoService;
+import com.vanseed.mimas.service.acct.IUserInfoService;
 
-import javax.annotation.Resource;  
-  
 /**
  * @author leon
  * 

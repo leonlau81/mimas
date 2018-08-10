@@ -3,8 +3,10 @@
  */
 package com.vanseed.mimas.common.support.mvc;
 
+import java.util.Map;
+
 /**
- * @author kunrey
+ * @author leon
  * 
  */
 public class Response {
@@ -16,15 +18,18 @@ public class Response {
 
 	private String memo;
 
-	private Object result;
+	private Map<String, Object> result;
+
+    public Response() {
+
+    }
 
 	public Response(int status, String memo) {
-		super();
 		this.status = status;
 		this.memo = memo;
 	}
 
-	public static Response newSuccess(Object result) {
+	public static Response newSuccess(Map<String, Object> result) {
 		Response response = new Response(Response.SUCCESS,
 				"success");
 		response.result = result;
@@ -47,11 +52,19 @@ public class Response {
 		this.memo = memo;
 	}
 
-	public Object getResult() {
+	public Map<String, Object> getResult() {
 		return result;
 	}
 
-	public void setResult(Object result) {
+	public void setResult(Map<String, Object> result) {
 		this.result = result;
 	}
+
+    public boolean isSuccess() {
+        if(this.status == SUCCESS){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

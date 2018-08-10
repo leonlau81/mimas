@@ -47,7 +47,7 @@ public class MyFilter extends ZuulFilter {
         Object accessToken = request.getParameter("token");
         String requestURI = request.getRequestURI();
         
-        if(requestURI.indexOf("api-b")>0) {
+        if(requestURI.indexOf("api-user")>0) {
         	logger.warn("request intercepted!");
         	 ctx.setSendZuulResponse(false); 	
              ctx.setResponseStatusCode(401);

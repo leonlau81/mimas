@@ -4,7 +4,7 @@
 package com.vanseed.mimas.common.support.mvc;
 
 /**
- * @author kunrey
+ * @author leon
  * 
  */
 public class ResponseHeader extends Header {

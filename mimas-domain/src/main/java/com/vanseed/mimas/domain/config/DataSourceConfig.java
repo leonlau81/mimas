@@ -37,7 +37,7 @@ public class DataSourceConfig {
 
     @Bean
     @Qualifier("userDSProp")
-    @ConfigurationProperties(prefix="user.datasource")
+    @ConfigurationProperties(prefix="acct.datasource")
     public DataSourceProperties userDSProp( ) {
         DataSourceProperties prop = new DataSourceProperties();
         return prop;

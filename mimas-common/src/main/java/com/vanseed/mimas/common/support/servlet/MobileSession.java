@@ -3,10 +3,14 @@ package com.vanseed.mimas.common.support.servlet;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.io.Serializable;
+
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class MobileSession 
+public class MobileSession implements Serializable
 {
-	@JsonProperty("session_id")
+    private static final long serialVersionUID = 3635284619978215627L;
+
+    @JsonProperty("session_id")
 	private String sessionId;
 	
 	@JsonProperty("user_id")

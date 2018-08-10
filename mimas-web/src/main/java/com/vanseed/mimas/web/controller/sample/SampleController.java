@@ -63,7 +63,7 @@ public class SampleController extends BaseController {
 		
 		List<Sample> list = sampleService.findAll();
 		
-		return ResponseUtils.getSuccessRespose(list);
+		return ResponseUtils.getSuccessRespose("sampleList",list);
 	}
 	
 	/**
@@ -77,7 +77,7 @@ public class SampleController extends BaseController {
 		
 		Sample sample = sampleService.findSampleById(sampleId);
 		
-		return ResponseUtils.getSuccessRespose(sample);
+		return ResponseUtils.getSuccessRespose("sample",sample);
 	}
 	
 	/**
@@ -95,7 +95,7 @@ public class SampleController extends BaseController {
 		//Sample sample = sampleService.findSampleById(sampleId);
 		Sample sample = sampleService.modifyAmount(sampleId, amount);
 		
-		return ResponseUtils.getSuccessRespose(sample);
+		return ResponseUtils.getSuccessRespose("sample",sample);
 	}
 	
 		

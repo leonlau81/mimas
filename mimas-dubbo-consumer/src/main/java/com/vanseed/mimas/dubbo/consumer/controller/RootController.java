@@ -26,7 +26,7 @@ public class RootController extends BaseController {
 	public String loginPage(
 			HttpServletRequest request, HttpServletResponse response,
 			Model model){
-		model.addAttribute("host", "comb user");
+		model.addAttribute("host", "comb acct");
 		return "login";
 	}
 	
@@ -48,13 +48,13 @@ public class RootController extends BaseController {
 //		}	
 //		
 //		try{
-//			OssUser user = ossUserService.login(userName, password);
+//			OssUser acct = ossUserService.login(userName, password);
 //			//处理session
 //			HttpSession session = request.getSession(); 
 ////			OssUser sessionUser = new OssUser();
-////			sessionUser.setId(user.getId());
-////			sessionUser.setUserName(user.getUserName());
-//			AdminUtils.setSessionUser(session, user);
+////			sessionUser.setId(acct.getId());
+////			sessionUser.setUserName(acct.getUserName());
+//			AdminUtils.setSessionUser(session, acct);
 //			
 //			rtnMap.put("forwardUrl", "/admin/index.do");
 //		}catch(ServiceException se){

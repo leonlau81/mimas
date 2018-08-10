@@ -39,6 +39,6 @@ public class DubboControlloer extends BaseController{
 		RpcContext.getContext().setAttachment("s_sid", "1.1");
 		String result = dubboService.echo(name);
 		//logger.info("controller:ok!");
-		return ResponseUtils.getSuccessRespose(result);
+		return ResponseUtils.getSuccessRespose("result",result);
 	}
 }

@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.vanseed.mimas.common.support.servlet.MobileSession;
-import com.vanseed.mimas.service.base.CombSessionService;
+import com.vanseed.mimas.service.base.SessionService;
 
 
 @RunWith(SpringRunner.class)
@@ -19,7 +19,7 @@ import com.vanseed.mimas.service.base.CombSessionService;
 public class RedisTests {
 
 	@Autowired
-	private CombSessionService sessionService;
+	private SessionService sessionService;
 
 	@Before
 	public void setUp() {
